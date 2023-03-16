@@ -1,0 +1,150 @@
+body {
+  font-family: "Playfair Display", serif;
+}
+.navbar {
+  background-color: #e3e3e3;
+}
+.navbar-brand h2 {
+  font-weight: bold;
+  color: green;
+}
+
+.navbar-brand h2 span {
+  color: red;
+}
+.landing {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(9, 146, 9), rgb(236, 30, 30));
+  transform: skewY(-5deg);
+  padding: 20px;
+  z-index: -1;
+}
+.landing::after {
+  content: "";
+  position: absolute;
+  top: -300px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(9, 146, 9), rgb(236, 30, 30));
+  padding: 20px;
+  z-index: -2;
+}
+.text {
+  color: white;
+}
+.text h2 {
+  font-size: 50px;
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  width: 251px;
+  border-right: 2px solid white;
+  animation: typing 1s steps(9) 1s both, waiting 1s infinite;
+}
+@keyframes waiting {
+  0% {
+    border-color: #4d4c4c;
+  }
+  100% {
+    border-color: white;
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 251px;
+  }
+}
+.text p {
+  font-size: 18px;
+  color: #e3e3e3;
+}
+@media (min-width: 768px) {
+  .text p {
+    width: 400px;
+  }
+  .landing {
+    height: calc(100vh - 65px);
+  }
+}
+@media (max-width: 767px) {
+  .landing {
+    margin-top: 20px;
+  }
+  .landing::before {
+    top: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .landing .container {
+    flex-direction: column;
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.landing .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.landing .container form {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #e3e3e3;
+}
+.landing .container form h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: green;
+}
+#exampleInputEmail1:focus,
+#exampleInputPassword1:focus {
+  outline: none;
+  box-shadow: none;
+}
+#exampleInputEmail1 {
+  color: green;
+  border-color: green;
+}
+.form-label {
+  font-weight: bold;
+}
+#exampleInputPassword1 {
+  color: red;
+  border-color: red;
+}
+.btn-primary {
+  background-color: green;
+  border: none;
+  width: 150px;
+  transition: 0.5s;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px rgb(11, 185, 11);
+}
+.btn-primary:hover {
+  background-color: red;
+  box-shadow: 0px 0px 10px red;
+}
